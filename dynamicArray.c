@@ -127,7 +127,7 @@ void addDynArr(DynArr *v, TYPE val)
 	if(sizeDynArr(v) == v->capacity){
         _dynArrSetCapacity(v, 2*v->capacity);
 	}
-	v->data[v->size];
+	v->data[v->size] = val;
 	v->size++;
 
 }

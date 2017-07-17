@@ -32,13 +32,13 @@ char nextChar(char* s)
 */
 int isBalanced(char* s)
 {
-	dynArr *stack = newDynArr(10);
-	char ch,
-	char top;
+        DynArr *stack = newDynArr(10);
+	char ch;
+	//char top;
 	char matching = ' ';
 	int balance = 1;
 	while(balance && (ch = nextChar(s)) != '\0'){
-        swith(ch){
+        switch(ch){
             case '(':
             case '{':
             case '[':
@@ -62,9 +62,9 @@ int isBalanced(char* s)
                 popDynArr(stack);
 	}
 	if(isEmptyDynArr(stack))
-        return 1
-    else
-        return 0;
+        	return 1;
+    	else
+        	return 0;
 }
 
 int main(int argc, char* argv[]){
